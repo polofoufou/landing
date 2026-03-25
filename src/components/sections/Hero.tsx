@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowDown, Code2, ExternalLink, Mail } from 'lucide-react'
 import { GradientText } from '@/components/ui/GradientText'
@@ -182,15 +183,17 @@ export function Hero() {
               />
 
               {/* Avatar */}
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-blue-600/30 to-emerald-600/20 border border-white/10 flex items-center justify-center overflow-hidden relative">
-                <div className="text-center">
-                  <div className="text-7xl font-bold bg-gradient-to-br from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-                    PP
-                  </div>
-                  <div className="text-white/30 text-sm mt-2">Paul Pacheco</div>
-                </div>
-                {/* Inner glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent rounded-full" />
+              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full border border-white/10 overflow-hidden relative shadow-2xl shadow-blue-900/40">
+                <Image
+                  src="/paul-photo-hero.png"
+                  alt="Paul Pacheco"
+                  fill
+                  className="object-cover object-center"
+                  style={{ objectPosition: '50% 15%' }}
+                  priority
+                />
+                {/* Inner glow overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#060e1a]/40 to-transparent rounded-full pointer-events-none" />
               </div>
 
               {/* Floating tech badges */}

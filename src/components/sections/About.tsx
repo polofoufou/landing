@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Badge } from '@/components/ui/Badge'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { SectionHeading } from '@/components/ui/SectionHeading'
@@ -30,11 +31,15 @@ export function About() {
             <div className="flex flex-col items-center lg:items-start gap-8">
               {/* Avatar */}
               <div className="relative">
-                <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-blue-600/30 to-emerald-600/20 border border-white/10 flex items-center justify-center overflow-hidden">
-                  <div className="text-center">
-                    <div className="text-5xl font-bold bg-gradient-to-br from-blue-400 to-emerald-400 bg-clip-text text-transparent">PP</div>
-                    <div className="text-white/40 text-xs mt-1">CTO · IA · Impact</div>
-                  </div>
+                <div className="w-48 h-48 rounded-2xl border border-white/10 overflow-hidden shadow-xl shadow-blue-900/30 relative">
+                  <Image
+                    src="/paul-photo-about.jpeg"
+                    alt="Paul Pacheco"
+                    fill
+                    className="object-cover object-center"
+                    style={{ objectPosition: '50% 15%' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#080f1e]/30 to-transparent pointer-events-none" />
                 </div>
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-white text-xs" aria-hidden="true">✓</span>
