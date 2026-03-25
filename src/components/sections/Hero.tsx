@@ -86,7 +86,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg text-white/50 mb-8 max-w-lg"
             >
-              Du premier dev recruté à l'équipe de 15 — je construis la tech qui fait tenir la mission.
+              Je construis la tech qui sert la mission — du prototype au scale.
             </motion.p>
 
             {/* Badges */}
