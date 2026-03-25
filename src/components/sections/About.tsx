@@ -1,29 +1,33 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { Badge } from '@/components/ui/Badge'
-import { ScrollReveal } from '@/components/ui/ScrollReveal'
-import { SectionHeading } from '@/components/ui/SectionHeading'
-import { sectors, languages } from '@/lib/data'
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Badge } from "@/components/ui/Badge";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { sectors, languages } from "@/lib/data";
 
 const techStack = [
-  { name: 'TypeScript', color: '#3178C6' },
-  { name: 'React', color: '#61DAFB' },
-  { name: 'Next.js', color: '#FFFFFF' },
-  { name: 'Node.js', color: '#83CD29' },
-  { name: 'Nest.js', color: '#E0234E' },
-  { name: 'React Native', color: '#61DAFB' },
-  { name: 'AWS', color: '#FF9900' },
-  { name: '.NET', color: '#512BD4' },
-  { name: 'Docker', color: '#2496ED' },
-  { name: 'K8s', color: '#326CE5' },
-  { name: 'Terraform', color: '#844FBA' },
-]
+  { name: "TypeScript", color: "#3178C6" },
+  { name: "React", color: "#61DAFB" },
+  { name: "Next.js", color: "#FFFFFF" },
+  { name: "Node.js", color: "#83CD29" },
+  { name: "Nest.js", color: "#E0234E" },
+  { name: "React Native", color: "#61DAFB" },
+  { name: "AWS", color: "#FF9900" },
+  { name: ".NET", color: "#512BD4" },
+  { name: "Docker", color: "#2496ED" },
+  { name: "K8s", color: "#326CE5" },
+  { name: "Terraform", color: "#844FBA" },
+];
 
 export function About() {
   return (
-    <section id="about" className="py-24 bg-[#080f1e]" aria-label="À propos de Paul Pacheco">
+    <section
+      id="about"
+      className="py-24 bg-[#080f1e]"
+      aria-label="À propos de Paul Pacheco"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left — avatar + stats */}
@@ -37,21 +41,28 @@ export function About() {
                     alt="Paul Pacheco"
                     fill
                     className="object-cover object-center"
-                    style={{ objectPosition: '50% 15%' }}
+                    style={{ objectPosition: "65% 15%" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#080f1e]/30 to-transparent pointer-events-none" />
                 </div>
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white text-xs" aria-hidden="true">✓</span>
+                  <span className="text-white text-xs" aria-hidden="true">
+                    ✓
+                  </span>
                 </div>
               </div>
 
               {/* Languages */}
               <div>
-                <h3 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-3">Langues</h3>
+                <h3 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-3">
+                  Langues
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {languages.map((l) => (
-                    <div key={l.lang} className="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg">
+                    <div
+                      key={l.lang}
+                      className="flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg"
+                    >
                       <span aria-hidden="true">{l.code}</span>
                       <span className="text-white/80 text-sm">{l.lang}</span>
                       <span className="text-white/40 text-xs">— {l.level}</span>
@@ -62,10 +73,14 @@ export function About() {
 
               {/* Sectors */}
               <div>
-                <h3 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-3">Secteurs de prédilection</h3>
+                <h3 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-3">
+                  Secteurs de prédilection
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {sectors.map((s) => (
-                    <Badge key={s} variant="glow">{s}</Badge>
+                    <Badge key={s} variant="glow">
+                      {s}
+                    </Badge>
                   ))}
                 </div>
               </div>
@@ -77,25 +92,29 @@ export function About() {
             <ScrollReveal>
               <SectionHeading
                 label="À propos"
-                title="CTO passionné de code, d'IA et d'impact positif"
+                title="CTO de terrain : je construis des produits qui ont du sens, de la v1 aux millions d'utilisateurs."
               />
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
               <div className="space-y-4 text-white/70 leading-relaxed">
                 <p>
-                  CTO & Lead Produit IA avec{' '}
-                  <span className="text-white font-semibold">17 ans d'expérience</span>{' '}
-                  en transformation tech et produit, spécialisé dans la conception et le déploiement de solutions innovantes à{' '}
-                  <span className="text-emerald-400 font-semibold">fort impact social et environnemental</span>.
+                  J'ai choisi dès le départ de ne travailler que sur des produits avec une mission. Chez{" "}
+                  <span className="text-emerald-400 font-semibold">PHENIX</span>{" "}
+                  d'abord — éviter 70 millions de repas gaspillés. Puis chez{" "}
+                  <span className="text-blue-400 font-semibold">Les Sherpas</span>{" "}
+                  — rendre le soutien scolaire accessible à tous. Les deux fois, j'étais le{" "}
+                  <span className="text-white font-semibold">premier CTO recruté</span>{" "}
+                  : tout construire, de l'architecture au recrutement, sans filet.
                 </p>
                 <p>
-                  Mon parcours allie expertise technique (architecture dev, infra & cloud,{' '}
-                  <span className="text-blue-400 font-semibold">LLM</span>, MVP → scale-up) et leadership stratégique (recrutement, culture tech, pilotage produit).
+                  Concrètement : je conçois les architectures qui tiennent quand vous passez de 10 à 1 000 clients, je constitue et coache les équipes tech/produit, et je mets{" "}
+                  <span className="text-white font-semibold">l'IA en production</span>{" "}
+                  là où elle crée une vraie valeur — pas juste un effet de manche.
                 </p>
-                <p>
-                  Passionné par les projets où la technologie sert un{' '}
-                  <span className="text-white font-semibold">objectif mesurable</span> : 70M repas sauvés, 30k familles accompagnées, {'>'}35k req/s en production.
+                <p className="text-white/50 text-sm border-l-2 border-blue-500/40 pl-3">
+                  Sur l'IA : la valeur n'est pas dans le modèle, elle est dans l'intégration. Un LLM bien orchestré dans un workflow utilisateur bat à plate couture une implémentation brute. C'est ce que j'ai appris en le déployant pour{" "}
+                  <span className="text-white/70 font-semibold">30 000+ utilisateurs</span>.
                 </p>
               </div>
             </ScrollReveal>
@@ -103,7 +122,9 @@ export function About() {
             {/* Tech stack */}
             <ScrollReveal delay={0.2}>
               <div>
-                <h3 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">Stack technique</h3>
+                <h3 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-4">
+                  Stack technique
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {techStack.map((tech, i) => (
                     <motion.div
@@ -130,5 +151,5 @@ export function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

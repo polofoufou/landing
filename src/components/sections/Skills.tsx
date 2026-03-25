@@ -13,8 +13,8 @@ export function Skills() {
         <ScrollReveal className="mb-12">
           <SectionHeading
             label="Compétences"
-            title="Full-stack from idea to production"
-            description="Architecture, développement, cloud, IA et management — des fondations au déploiement."
+            title="Conception produit · Architecture · Delivery"
+            description="De la définition des fonctionnalités à l'infrastructure qui tient — je couvre toute la chaîne, avec une vision produit en fil rouge."
           />
         </ScrollReveal>
 

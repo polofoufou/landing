@@ -11,9 +11,9 @@ export function WhyMe() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="mb-12 text-center">
           <SectionHeading
-            label="Valeur ajoutée"
-            title="Pourquoi travailler avec moi ?"
-            description="Ce qui me distingue, c'est la combinaison rare d'un CTO qui reste dans le code tout en pilotant la stratégie et en fédérant des équipes."
+            label="Ce que j'apporte"
+            title="Hands-on, stratégique, terrain."
+            description="Je prends part aux décisions produit, je conçois les architectures, je recrute et j'anime les équipes. Je code quand ça compte — je délègue quand ça accélère."
             centered
           />
         </ScrollReveal>

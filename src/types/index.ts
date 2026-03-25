@@ -84,3 +84,13 @@ export interface NavItem {
   label: string
   href: string
 }
+
+export interface Testimonial {
+  id: string
+  quote: string
+  name: string
+  role: string
+  company: string
+  initials: string
+  color: string
+}

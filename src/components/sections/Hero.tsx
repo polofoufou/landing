@@ -1,14 +1,20 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowDown, Code2, ExternalLink, Mail } from 'lucide-react'
-import { GradientText } from '@/components/ui/GradientText'
-import { Badge } from '@/components/ui/Badge'
-import { GITHUB_URL, LINKEDIN_URL, CONTACT_EMAIL } from '@/lib/constants'
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowDown, Code2, ExternalLink, Mail } from "lucide-react";
+import { GradientText } from "@/components/ui/GradientText";
+import { Badge } from "@/components/ui/Badge";
+import { GITHUB_URL, LINKEDIN_URL, CONTACT_EMAIL } from "@/lib/constants";
 
-const badges = ['EdTech', 'Tech for Good', 'IA', 'Économie Circulaire', 'Impact']
+const badges = [
+  "EdTech",
+  "Tech for Good",
+  "IA",
+  "Économie Circulaire",
+  "Impact",
+];
 
 export function Hero() {
   return (
@@ -20,7 +26,10 @@ export function Hero() {
       <div className="absolute inset-0 bg-[#060e1a]" aria-hidden="true">
         {/* Gradient mesh */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600/15 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-3xl" />
 
         {/* Grid pattern */}
@@ -28,7 +37,7 @@ export function Hero() {
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)`,
-            backgroundSize: '64px 64px',
+            backgroundSize: "64px 64px",
           }}
         />
       </div>
@@ -67,7 +76,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl sm:text-2xl text-white/70 font-medium mb-2"
             >
-              CTO · IA praticien · Bâtisseur de produits à impact
+              CTO · Architecte produit · Praticien de l'IA
             </motion.p>
 
             {/* Tagline */}
@@ -77,7 +86,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg text-white/50 mb-8 max-w-lg"
             >
-              Je transforme des idées en produits qui changent des vies.
+              Du premier dev recruté à l'équipe de 15 — je construis la tech qui fait tenir la mission.
             </motion.p>
 
             {/* Badges */}
@@ -171,15 +180,15 @@ export function Hero() {
               <motion.div
                 className="absolute inset-0 rounded-full border border-blue-500/20"
                 animate={{ scale: [1, 1.05, 1], rotate: [0, 360] }}
-                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                style={{ margin: '-20px' }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                style={{ margin: "-20px" }}
               />
               {/* Middle ring */}
               <motion.div
                 className="absolute inset-0 rounded-full border border-emerald-500/15"
                 animate={{ scale: [1, 1.03, 1], rotate: [360, 0] }}
-                transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
-                style={{ margin: '-40px' }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                style={{ margin: "-40px" }}
               />
 
               {/* Avatar */}
@@ -189,7 +198,7 @@ export function Hero() {
                   alt="Paul Pacheco"
                   fill
                   className="object-cover object-center"
-                  style={{ objectPosition: '50% 15%' }}
+                  style={{ objectPosition: "20% 15%" }}
                   priority
                 />
                 {/* Inner glow overlay */}
@@ -198,17 +207,22 @@ export function Hero() {
 
               {/* Floating tech badges */}
               {[
-                { label: 'TypeScript', top: '10%', right: '-20%', delay: 1 },
-                { label: 'Next.js', bottom: '20%', left: '-20%', delay: 1.3 },
-                { label: 'AWS', top: '50%', right: '-25%', delay: 1.6 },
+                { label: "TypeScript", top: "10%", right: "-20%", delay: 1 },
+                { label: "Next.js", bottom: "20%", left: "-20%", delay: 1.3 },
+                { label: "AWS", top: "50%", right: "-25%", delay: 1.6 },
               ].map((item) => (
                 <motion.div
                   key={item.label}
                   className="absolute px-3 py-1.5 bg-[#0A1628] border border-white/10 rounded-lg text-xs font-mono text-white/70 shadow-xl"
-                  style={{ top: item.top, right: item.right, bottom: item.bottom, left: item.left }}
+                  style={{
+                    top: item.top,
+                    right: item.right,
+                    bottom: item.bottom,
+                    left: item.left,
+                  }}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: item.delay, type: 'spring' }}
+                  transition={{ delay: item.delay, type: "spring" }}
                 >
                   {item.label}
                 </motion.div>
@@ -225,14 +239,16 @@ export function Hero() {
           transition={{ delay: 1.2 }}
           aria-hidden="true"
         >
-          <span className="text-white/30 text-xs tracking-widest uppercase">Scroll</span>
+          <span className="text-white/30 text-xs tracking-widest uppercase">
+            Scroll
+          </span>
           <motion.div
             className="w-px h-8 bg-gradient-to-b from-white/30 to-transparent"
             animate={{ scaleY: [0, 1, 0], originY: 0 }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           />
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

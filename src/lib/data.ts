@@ -7,6 +7,7 @@ import type {
   Certification,
   ImpactStat,
   WhyMeItem,
+  Testimonial,
 } from '@/types'
 
 export const experiences: Experience[] = [
@@ -347,9 +348,9 @@ export const whyMeItems: WhyMeItem[] = [
   },
   {
     icon: '🔥',
-    title: 'Épreuve du feu',
+    title: 'Fondé deux fois sur rien',
     description:
-      'Deux expériences CTO multi-casquettes, de la startup à la scale-up, avec IA en production et constitution d\'équipes solides.',
+      'Premier CTO chez PHENIX, puis chez Les Sherpas. De 1 à 12, puis de 1 à 15 — architecture, recrutement, culture, scaling. Dans l\'ordre, sans filet.',
     color: '#EF4444',
   },
   {
@@ -375,10 +376,40 @@ export const whyMeItems: WhyMeItem[] = [
   },
   {
     icon: '🔧',
-    title: 'Multi-casquettes',
+    title: 'Du code à la roadmap',
     description:
-      'Toujours actif dans le code, avec un fort attrait pour la stratégie, le pilotage produit et la fédération d\'équipes.',
+      'Je ne délègue pas ce que je ne comprends pas. De l\'architecture système au brief produit — j\'ai un avis informé à chaque étape, et ça change tout quand les décisions comptent.',
     color: '#EC4899',
+  },
+]
+
+export const testimonials: Testimonial[] = [
+  {
+    id: 't1',
+    quote: '// TODO — colle ici une recommandation LinkedIn (CEO, cofondateur, board)',
+    name: 'Prénom Nom',
+    role: 'CEO',
+    company: 'Les Sherpas',
+    initials: 'PN',
+    color: '#3B82F6',
+  },
+  {
+    id: 't2',
+    quote: '// TODO — colle ici une recommandation LinkedIn (associé, investisseur ou DG)',
+    name: 'Prénom Nom',
+    role: 'CEO',
+    company: 'PHENIX',
+    initials: 'PN',
+    color: '#10B981',
+  },
+  {
+    id: 't3',
+    quote: '// TODO — colle ici une recommandation LinkedIn (collaborateur direct, lead dev, PM)',
+    name: 'Prénom Nom',
+    role: 'Lead Engineer',
+    company: 'Les Sherpas',
+    initials: 'PN',
+    color: '#8B5CF6',
   },
 ]
 
